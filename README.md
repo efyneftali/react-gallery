@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+TeamTreeHouse
+Full Stack Java Script Tech Degree
+Unit 7 React Photo Gallery using Flicker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App.js is the main container - switch element, nest inside 3 routes for tags of the 3 default topics
 
-## Available Scripts
+Stateless components - Photo component that display the li and img elements - Nav component for the apps nav links - NotFound component that displays a user-friendly message when the search return no results
 
-In the project directory, you can run:
+Statefull Component - seach form - photo container where data is managed with state - url should show the correnct path when you navigate with forward and back buttons
+Flickr non comercial API key
+config.js file imports API key inot the app that allows usr to request data from API - import to src/App.js
 
-### `npm start`
+config and nodemodules added to .gitignore
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React Router set routes: - "search" link - lets users search for photos - navLink - navigates user to correct route and displays the appropriate info - currentl rount is reflected in the URL - display 3 default topic links that return a list of photots matching it - sunsets - bts - thailand - request and load the photos for the 3 defaults topics when then the app first loads. dont need to re-request and reload new data everythime one of the pages is loaded
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Requesting the Data - Fetch data from Flickr API - done in App.js - limit the num of results to 24 using the per_page argument - choose JSON as the output, "Do not sign call" - "call Method" see an example of the API call that we need to make - fetch data in container and pass it down to the display,the url bar will match what is displayed on the page if you use nav buttons
 
-### `npm test`
+Search - includes a serach field and search route to search for new categories of imgs
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Displaying the Data - each img gets a unique key prop - no console warning regarding key - provide the title of each img via props - current route is reflected in the URL - 24 img are displayed
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+CSS styles - match the general mockup
