@@ -1,3 +1,16 @@
-// import React from 'react'
+import React from 'react';
 
-// export default Nav
+const Nav = () =>{
+    return(
+        <nav className="main-nav">
+            <ul>
+            <li><a href='#'>Sunsets</a></li>
+            <li><a href='#'>Thailand</a></li>
+            <li><a href='#'>Korea</a></li>
+            </ul>
+        </nav> 
+    )
+}
+
+
+export default Nav
