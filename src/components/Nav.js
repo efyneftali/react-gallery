@@ -2,6 +2,7 @@ import React,  {Component} from 'react'
 import { withRouter } from 'react-router-dom'
 import {NavLink} from 'react-router-dom'
 
+//Display 3 default img search options
 class Nav extends Component{
     constructor() {
         super();

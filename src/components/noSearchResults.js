@@ -1,5 +1,6 @@
 import React from 'react'
 
+//displays usr friendly matches when the API is not able to img from user input
 const NoSearchResults = () => {
     return (
         <div className="photo-container">

@@ -3,7 +3,7 @@ import Photo from './Photo'
 
 import NoSearchResults from './noSearchResults'
 
-
+//display the imgs based on searchers or default options. Receives the API response and metadata via props
 const Gallary = (props) =>{
     const results = props.data
     let photos
@@ -16,8 +16,7 @@ const Gallary = (props) =>{
                     server={photo.server} 
                     secret={photo.secret} 
                     key={photo.id}
-            /> )
-            
+            /> )   
         } )
     } else if (props.loading) {
         return (

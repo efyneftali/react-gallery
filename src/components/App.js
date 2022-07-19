@@ -65,6 +65,7 @@ export default class App extends Component {
   render(){
 
     return (
+      //controls routing, and shows error pages
       <BrowserRouter> 
         
           <SearchForm onSearch={this.performSearch}/>

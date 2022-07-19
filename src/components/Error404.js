@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+//shows 404 when usr navigates to a undefined route
 const Error404 = () => {
     return (
         <div className="photo-container">
