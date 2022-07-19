@@ -1,16 +1,32 @@
-import React from 'react';
+import React,  {Component} from 'react'
+import { withRouter } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
-const Nav = () =>{
-    return(
+class Nav extends Component{
+    constructor() {
+        super();
+        this.state = {
+            button: ''
+        };
+    }
+    handleClick = (e) => {
+        let buttonClicked = e.target.innerText.toLowerCase();
+        this.props.onClick(buttonClicked);
+        this.setState({button: buttonClicked});
+    }
+    render(){
+         return(
         <nav className="main-nav">
             <ul>
-            <li><a href='#'>Sunsets</a></li>
-            <li><a href='#'>Thailand</a></li>
-            <li><a href='#'>Korea</a></li>
+            <li><NavLink to='/cherryBlossom'>Cherry Blossom</NavLink></li>
+            <li><NavLink to='/snow'>Snow</NavLink></li>
+            <li><NavLink to='/flower'>Flower</NavLink></li>
             </ul>
         </nav> 
     )
+    }
+   
 }
 
 
-export default Nav
+export default withRouter(Nav)
